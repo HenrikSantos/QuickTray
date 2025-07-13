@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "An Electron application with React and TypeScript",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "HenrikSantos",
+  "homepage": "https://github.com/HenrikSantos/QuickTray",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --cache .",
@@ -18,7 +18,8 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "electron-vite build && electron-builder --mac",
-    "build:linux": "electron-vite build && electron-builder --linux"
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "publish": "npm run build && electron-builder -w -l --publish always"
   },
   "build": {
     "appId": "com.electron.quicktray",
@@ -28,6 +29,11 @@
       "resources/",
       "package.json"
     ],
+    "publish": {
+      "provider": "github",
+      "owner": "HenrikSantos",
+      "repo": "QuickTray"
+    },
     "directories": {
       "buildResources": "resources",
       "output": "release"
