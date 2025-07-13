@@ -15,7 +15,7 @@ class SettingsService {
   private data: StoreSchema
 
   private defaults: StoreSchema = {
-    shortcut: 'CommandOrControl+,',
+    shortcut: 'CommandOrControl+.',
     startOnLogin: false,
     apiKey: '',
     fromLanguage: 'auto',

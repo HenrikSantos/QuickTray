@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import {
@@ -30,6 +30,7 @@ const languages = [
 // --- Main App Component ---
 function App(): React.JSX.Element {
   const { t, i18n } = useTranslation()
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
   const [showSettings, setShowSettings] = useState(false)
   const [text, setText] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -76,6 +77,13 @@ function App(): React.JSX.Element {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
+  }, [])
+
+  useEffect(() => {
+    const cleanup = window.api.on('focus-textarea', () => {
+      textareaRef.current?.focus()
+    })
+    return cleanup
   }, [])
 
   const handleAction = async (
@@ -191,6 +199,7 @@ function App(): React.JSX.Element {
           <SettingsView />
         ) : (
           <Textarea
+            ref={textareaRef}
             className="w-full flex-1 text-lg resize-none"
             placeholder={t('textareaPlaceholder')}
             value={text}

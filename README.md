@@ -2,8 +2,6 @@
 
 AI QuickTray is a powerful desktop application designed to boost your productivity by giving you instant access to AI-powered text tools. Built with Electron and React, this application lives in your system tray, allowing you to quickly translate, reformulate, correct, or summarize text using a simple global shortcut.
 
-[![AI QuickTray Screenshot](https://user-images.githubusercontent.com/your-username/your-repo/your-image.png)](https://github.com/HenrikSantos/QuickTray)
-
 ## Features
 
 -   **System Tray Integration**: Runs discreetly in the system tray for quick access.

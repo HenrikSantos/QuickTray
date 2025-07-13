@@ -1,9 +1,15 @@
-import { contextBridge, ipcRenderer } from 'electron'
+import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
 const api = {
-  invoke: (channel: string, ...args: unknown[]) => ipcRenderer.invoke(channel, ...args)
+  invoke: (channel: string, ...args: unknown[]) => ipcRenderer.invoke(channel, ...args),
+  on: (channel: string, listener: (event: IpcRendererEvent, ...args: unknown[]) => void) => {
+    ipcRenderer.on(channel, listener)
+    return () => {
+      ipcRenderer.removeListener(channel, listener)
+    }
+  }
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

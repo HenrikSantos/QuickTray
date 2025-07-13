@@ -68,6 +68,10 @@ function createWindow(): void {
     }
   })
 
+  mainWindow.on('show', () => {
+    mainWindow?.webContents.send('focus-textarea')
+  })
+
   mainWindow.on('blur', () => {
     // A menos que as devtools estejam abertas
     if (!mainWindow?.webContents.isDevToolsOpened()) {
