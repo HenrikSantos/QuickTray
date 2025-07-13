@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "detectLanguage": "Detect Language",
+    "english": "English",
+    "portuguese": "Portuguese",
+    "spanish": "Spanish",
+    "french": "French",
+    "german": "German",
+    "translate": "Translate",
+    "improve": "Improve",
+    "correct": "Correct",
+    "summarize": "Summarize",
+    "textareaPlaceholder": "Enter text to be corrected or translated...",
+    "settings": "Settings",
+    "apiKeyLabel": "API Key (Gemini 2.0)",
+    "getApiKey": "Get your key at:",
+    "globalShortcut": "Global Shortcut",
+    "restartApp": "You need to restart the app for the shortcut to take effect.",
+    "startOnLogin": "Start with system",
+    "saveSettings": "Save Settings",
+    "resetSettings": "Reset Settings",
+    "appLanguage": "Application Language"
+  }
+} 

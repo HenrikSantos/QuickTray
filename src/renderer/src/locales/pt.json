@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "detectLanguage": "Detectar Idioma",
+    "english": "Inglês",
+    "portuguese": "Português",
+    "spanish": "Espanhol",
+    "french": "Francês",
+    "german": "Alemão",
+    "translate": "Traduzir",
+    "improve": "Melhorar",
+    "correct": "Corrigir",
+    "summarize": "Resumir",
+    "textareaPlaceholder": "Digite o texto para ser corrigido ou traduzido...",
+    "settings": "Configurações",
+    "apiKeyLabel": "Chave da API (Gemini 2.0)",
+    "getApiKey": "Obtenha sua chave em:",
+    "globalShortcut": "Atalho Global",
+    "restartApp": "É necessário reiniciar o app para o atalho ter efeito.",
+    "startOnLogin": "Iniciar com o sistema",
+    "saveSettings": "Salvar Configurações",
+    "resetSettings": "Resetar configurações",
+    "appLanguage": "Idioma do Aplicativo"
+  }
+} 
